@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+header img {
+    margin-left: 20px;
+}
+
+header {
+    background-color: bisque;
+    box-shadow: 0px 5px 10px rgb(156, 156, 156);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+
+    z-index: 100;
+}
+
+.search {
+    width: max-content;
+    padding: 14px;
+    border-radius: 28px;
+
+    background: #f6f6f6;
+
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    width: 350px;
+
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+  background-color: #b59d9d;
+
+  display: none;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color:dimgray;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 15px;
+
+    font-size: 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 10ms;
+}
+
+.nav__links li a:hover {
+    color: rgb(59, 59, 59);
+}
+
+/****************************************************************/
+
+main {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90vh 900px;
+    grid-template-areas: 
+    'intro'
+    'book_display';
+}
+
+.intro {
+  height: 100%;
+  font-size: 30px;
+
+  grid-area: intro;
+}
+
+.bg-image {
+  background-image: url("https://t3.ftcdn.net/jpg/06/25/25/48/360_F_625254822_ZnId6bB60hqC9WXH1uEzViKtLznxHv6t.jpg");
+
+  filter: blur(7px);
+
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-text h1 {
+  font-size: 90px;
+}
+
+.bookDisplay {
+    margin: 20px 50px;
+    padding: 10px;
+    grid-area: book_display;
+    /* border: 1px solid black; */
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.bookCard {
+    width: 325px;
+    height: 100%;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    background-color: beige;
+
+    transform: scale(1);
+    box-shadow: none;
+    overflow: hidden;
+    
+
+    transition: all 0.3s ease;
+  }
+
+  .bookCard:hover {
+      transform: scale(1.03);
+      box-shadow: 2px 2px 12px rgb(189, 189, 189);
+  
+      transition: all 0.3s ease;
+  }
+
+.bookImage {
+    background-color: aqua;
+    height: 180px;
+    overflow: hidden;
+
+    background-size: cover;
+    
+    border-radius: 5px 5px 0 0;
+    
+    transform: scale(1);
+    transition: all 0.7s ease;
+  }
+  
+#img1 {
+  background-image: url('https://cdn2.penguin.com.au/covers/original/9780451530578.jpg');
+}
+
+#img2 {
+  background-image: url('https://m.media-amazon.com/images/I/71OZY035QKL.jpg');
+}
+
+#img3 {
+  background-image: url('https://m.media-amazon.com/images/I/81UGPuNl7kL._UF1000,1000_QL80_.jpg');
+}
+
+#img4 {
+  background-image: url('https://m.media-amazon.com/images/I/81q77Q39nEL.jpg');
+}
+
+#img5 {
+  background-image: url('https://m.media-amazon.com/images/I/81oEi+spRqL._AC_UF1000,1000_QL80_.jpg');
+}
+
+#img6 {
+  background-image: url('https://m.media-amazon.com/images/I/91DOl2PgkfL.jpg');
+}
+
+#img7 {
+  background-image: url('https://m.media-amazon.com/images/I/81mCE+uclxL._UF1000,1000_QL80_.jpg');
+}
+
+#img8 {
+  background-image: url('https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1715279349i/213126706.jpg');
+}
+
+.imgContainer {
+  height: 180px;
+  overflow: hidden;
+}
+
+.cardText {
+  text-align: center;
+  margin: 5px 7px;
+}
+
+.bookCard:hover .bookImage{
+  transform: scale(1.07);
+  transition: all 0.7s ease-out;
+}
+
+.bookCard-buttons {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.bookCard-buttons button {
+    border: none;
+    padding: 7px;
+    margin: 0px 10px 10px 10px;
+    background-color: bisque;
+    border-radius: 4px;
+
+    transition: background-color 0.3s ease;
+}
+
+.bookCard-buttons button:hover {
+  background-color: rgb(253, 217, 174);
+  transition: all 0.3s ease;
+}
+
+/******************************************************************/
+
+footer {
+    width: 100%;
+    height: 130px;
+    padding: 20px;
+    margin: 20px 0 0 0;
+    background-color: bisque;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+}
+
+.footer_text {
+  font-size: 20px;
+}
+
+.social_logo_links {
+  width: 200px;
+  margin-right: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social_logo_links img {
+  margin: 3px;
+}
+
+.fb {
+  margin-right: 75px;
+}
+
+.insta {
+  margin-right: 40px;
+}
+
+
+@media  (1135px < width < 1480px) {
+  main {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90vh 1300px;
+    grid-template-areas: 
+    'intro'
+    'book_display';
+}
+
+  .bookDisplay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 400px);
+  }
+}
+
+@media  (790px < width < 1135px) {
+  main {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90vh 1750px;
+    grid-template-areas: 
+    'intro'
+    'book_display';
+}
+
+  .bookDisplay {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 400px);
+  }
+
+  .search-input {
+    display: none;
+  }
+}
+
+@media  ( width < 790px) {
+  main {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90vh 3400px;
+    grid-template-areas: 
+    'intro'
+    'book_display';
+}
+
+  .bookDisplay {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 400px);
+  }
+
+  .links, .search-form {
+    display: none;
+  }
+
+  .hamburger { 
+    display: flex;
+  }
+/* 
+  footer {
+    flex-direction: column;
+  } */
+}
